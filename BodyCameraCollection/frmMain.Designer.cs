@@ -52,12 +52,14 @@
             this.tlpBody.Location = new System.Drawing.Point(0, 98);
             this.tlpBody.Name = "tlpBody";
             this.tlpBody.RowCount = 4;
-            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpBody.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlpBody.Size = new System.Drawing.Size(1188, 542);
             this.tlpBody.TabIndex = 0;
+            this.tlpBody.CellPaint += new System.Windows.Forms.TableLayoutCellPaintEventHandler(this.tlpBody_CellPaint);
+            this.tlpBody.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpBody_Paint);
             // 
             // panelStatus
             // 

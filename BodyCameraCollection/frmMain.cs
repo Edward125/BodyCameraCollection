@@ -35,5 +35,19 @@ namespace BodyCameraCollection
             
 
         }
+
+        private void tlpBody_Paint(object sender, PaintEventArgs e)
+        {
+            Pen pp = new Pen(Color.White);
+            e.Graphics.DrawRectangle(pp, e.ClipRectangle.X - 1, e.ClipRectangle.Y - 1, e.ClipRectangle.X + e.ClipRectangle.Width - 0, e.ClipRectangle.Y + e.ClipRectangle.Height - 0);
+
+        }
+
+        private void tlpBody_CellPaint(object sender, TableLayoutCellPaintEventArgs e)
+        {
+            Pen pp = new Pen(Color.White);
+            e.Graphics.DrawRectangle(pp, e.CellBounds.X, e.CellBounds.Y, e.CellBounds.X + e.CellBounds.Width - 1, e.CellBounds.Y + e.CellBounds.Height - 1);
+
+        }
     }
 }
