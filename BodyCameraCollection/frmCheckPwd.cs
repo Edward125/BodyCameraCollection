@@ -79,6 +79,23 @@ namespace BodyCameraCollection
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            login();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            p.CheckPwd = false;
+            this.Close();
+        }
+
+        private void txtPwd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                login();
+        }
+
+        private void login()
+        {
             if (txtPwd.Text.Trim() == "2018")
             {
                 p.CheckPwd = true;
@@ -91,12 +108,6 @@ namespace BodyCameraCollection
                 txtPwd.Focus();
                 return;
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            p.CheckPwd = false;
-            this.Close();
         }
     }
 }

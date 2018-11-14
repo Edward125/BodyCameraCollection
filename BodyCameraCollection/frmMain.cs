@@ -53,7 +53,15 @@ namespace BodyCameraCollection
         private void picClose_Click(object sender, EventArgs e)
         {
             Form  f = new frmCheckPwd();
-            f.ShowDialog();
+           DialogResult dr = f.ShowDialog();
+
+           if ( p.CheckPwd)
+           {
+              // MessageBox.Show("密码正确");
+               Environment.Exit(0);
+           }
+
+            
 
         }
     }

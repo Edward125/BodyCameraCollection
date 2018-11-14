@@ -198,6 +198,7 @@
             this.txtPwd.Size = new System.Drawing.Size(237, 36);
             this.txtPwd.TabIndex = 0;
             this.txtPwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPwd_KeyPress);
             // 
             // label1
             // 
