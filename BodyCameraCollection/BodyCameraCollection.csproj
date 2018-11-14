@@ -50,6 +50,12 @@
     <Compile Include="frmCheck.Designer.cs">
       <DependentUpon>frmCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCheckPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckPwd.Designer.cs">
+      <DependentUpon>frmCheckPwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="WaterTextBox.cs" />
     <EmbeddedResource Include="frmCheck.resx">
       <DependentUpon>frmCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckPwd.resx">
+      <DependentUpon>frmCheckPwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

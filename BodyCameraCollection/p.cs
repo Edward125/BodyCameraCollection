@@ -16,6 +16,7 @@ namespace BodyCameraCollection
         public static string AppTitle = "成都恒安执法数据管理平台";
         public static int BodyRow = 4;
         public static int BodyColumn = 5;
+        public static bool CheckPwd = false;
 
 
         public static void CreateIni()

@@ -49,5 +49,12 @@ namespace BodyCameraCollection
             e.Graphics.DrawRectangle(pp, e.CellBounds.X, e.CellBounds.Y, e.CellBounds.X + e.CellBounds.Width - 1, e.CellBounds.Y + e.CellBounds.Height - 1);
 
         }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Form  f = new frmCheckPwd();
+            f.ShowDialog();
+
+        }
     }
 }
