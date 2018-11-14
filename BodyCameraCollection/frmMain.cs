@@ -31,10 +31,20 @@ namespace BodyCameraCollection
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            
+            LoadUI();
+
 
         }
+
+
+        private void LoadUI()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            p.CheckFolder();
+            p.CreateIni();
+            p.ReadIni();
+        }
+
 
         private void tlpBody_Paint(object sender, PaintEventArgs e)
         {
@@ -60,9 +70,30 @@ namespace BodyCameraCollection
               // MessageBox.Show("密码正确");
                Environment.Exit(0);
            }
+        }
 
-            
+
+        private void gDrawInfo(PaintEventArgs e,string str)
+        {
+
+            Graphics g = e.Graphics; //创建画板,这里的画板是由Form提供的. 
+            //
+            System.Drawing.Font font = new System.Drawing.Font("黑体", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            SolidBrush brush = new SolidBrush(Color.Black);
+            g.DrawString(str, font, brush, 100F, 25F);
+
 
         }
+
+        private void panelHead_Paint(object sender, PaintEventArgs e)
+        {
+            gDrawInfo(e, p.AppTitle);
+        }
+
+        private void picSet_Click(object sender, EventArgs e)
+        {
+         
+        }
+
     }
 }

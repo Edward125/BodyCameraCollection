@@ -94,6 +94,7 @@
             this.panelHead.Name = "panelHead";
             this.panelHead.Size = new System.Drawing.Size(1188, 95);
             this.panelHead.TabIndex = 2;
+            this.panelHead.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHead_Paint);
             // 
             // label3
             // 
@@ -170,6 +171,7 @@
             this.picSet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSet.TabIndex = 1;
             this.picSet.TabStop = false;
+            this.picSet.Click += new System.EventHandler(this.picSet_Click);
             // 
             // picLogo
             // 

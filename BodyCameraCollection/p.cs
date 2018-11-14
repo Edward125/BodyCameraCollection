@@ -28,15 +28,44 @@ namespace BodyCameraCollection
                 IniFile.IniWriteValue("SysConfig", "AppTitle", AppTitle);
                 IniFile.IniWriteValue("SysConfig", "AppVer:", Application.ProductVersion);
                 IniFile.IniWriteValue("SysConfig", "Row", BodyRow.ToString ());
-                IniFile.IniReadValue("SysConfig", "Column", BodyColumn.ToString());
-
+                IniFile.IniWriteValue("SysConfig", "Column", BodyColumn.ToString());
             }
-        }
 
+        }
 
         public static void ReadIni()
         {
+            IniFile.iniFilePathValue = SysIni;
+            if (File.Exists(SysIni))
+            {
+                AppTitle = IniFile.IniReadValue("SysConfig", "AppTitle");
+                try
+                {
+                    BodyRow = Convert.ToInt16(IniFile.IniReadValue("SysConfig", "Row"));
+                }
+                catch (Exception)
+                {
+                    BodyRow = 4;
+                }
+                try
+                {
+                    BodyColumn  = Convert.ToInt16(IniFile.IniReadValue("SysConfig", "Column"));
+                }
+                catch (Exception)
+                {
+                    BodyColumn  = 5;
 
+                }
+            }
+
+        }
+
+        public static void CheckFolder()
+        {
+            if (!Directory.Exists(AppFolder))
+            {
+                Directory.CreateDirectory(AppFolder);
+            }
         }
 
     }
